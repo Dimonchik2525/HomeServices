@@ -1,0 +1,43 @@
+.footer {
+   &__container {}
+
+   &__block {}
+
+   &__bottom {}
+
+   &__newsletter {
+      &__text {
+         &__title {}
+
+         &__subtitle {}
+      }
+
+      &__form {
+         &__input {}
+
+         &__button {}
+      }
+   }
+
+   &__socials {
+      &__title {
+         img {}
+      }
+
+      &__subtitle {}
+
+      &__icons {
+         img {}
+      }
+   }
+
+   &__links {
+      &__company {
+         &__item {}
+      }
+
+      &__legal {
+         &__item {}
+      }
+   }
+}
