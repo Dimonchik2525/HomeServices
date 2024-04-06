@@ -1,23 +1,151 @@
 .header {
-   &__container {}
+   background: var(--primary-dark-blue-1);
+   @include adaptiveValue("min-height", 80, 56, 1500, 720, 1);
+   display: flex;
+   align-items: center;
 
-   &__block {}
+   &__container {
+      flex-grow: 1;
+   }
+
+   &__block {
+      display: grid;
+      grid-template: auto/auto 1fr;
+      column-gap: rem(20);
+      align-items: center;
+      align-content: center;
+
+      @media (max-width: 720px) {
+         justify-content: space-between;
+      }
+   }
 
    &__logo {
-      img {}
+      display: flex;
+      column-gap: rem(8);
+
+      img {
+         height: rem(20);
+      }
+
+      @media (max-width:720px) {
+         align-items: center;
+         height: rem(32);
+      }
    }
 
    .menu {
-      &__body {}
+      display: flex;
+      align-items: center;
 
-      &__list {}
+      @media (max-width: 720px) {
+         justify-content: end;
+      }
 
-      &__item {}
+      &__body {
+         display: flex;
+         align-items: center;
+         column-gap: rem(15);
+         flex-grow: 1;
+         transition: all 0.8s ease 0s;
 
-      &__link {}
+         @media (max-width: 720px) {
+            position: absolute;
+            width: 72.5334%;
+            height: 100%;
+            top: 0;
+            right: 100%;
+            background: var(--primary-dark-blue-1);
+            color: var(--neutural-white);
+            flex-direction: column;
+            justify-content: start;
+            align-items: stretch;
+
+         }
+
+         .menu-open & {
+            right: 0;
+         }
+
+         .header__logo-duble {
+            display: none;
+
+            @media (max-width: 720px) {
+               display: block;
+               height: rem(56);
+               display: flex;
+               align-items: center;
+               padding-left: rem(29.87);
+            }
+         }
+      }
+
+      &__list {
+         margin: 0 auto;
+         display: flex;
+         @include adaptiveValue("column-gap", 57, 10, 1500, 700, 1);
+         font-weight: 700;
+         color: var(--neutural-white);
+
+         @media (max-width: 720px) {
+            flex-direction: column;
+            margin: 0 0;
+         }
+      }
+
+      &__item {
+         text-align: center;
+
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+
+      &__link {
+         line-height: 133%;
+
+         @media (max-width: 720px) {
+            display: block;
+            width: 100%;
+            padding: rem(32) rem(24);
+
+            &:first-child {
+               border-top: rem(1) solid var(--primary-dark-blue-2);
+            }
+         }
+      }
 
       &__24hours {
-         p {}
+         font-weight: 700;
+         color: var(--neutural-white);
+         display: flex;
+         align-items: center;
+         column-gap: rem(10);
+         justify-self: end;
+
+         p {
+            &:first-child {
+               width: rem(12);
+               height: rem(12);
+               border-radius: 50%;
+               background-color: var(--system-red);
+
+            }
+
+            &:not(:last-child) {
+               line-height: 133%;
+            }
+         }
+
+         @media (max-width: 700px) {
+            flex: 1 1 auto;
+            align-self: center;
+            align-items: end;
+            //justify-self: start;
+            padding-bottom: rem(36);
+         }
       }
    }
 }
@@ -26,14 +154,20 @@
 
 //Burger
 
-/*.icon-menu {
-
+.icon-menu {
+   -webkit-tap-highlight-color: transparent;
+   /* For iOS Safari */
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   /* For other browsers */
+   background-color: transparent;
    display: none;
 
-   @media (max-width:750px) {
+   @media (max-width:720px) {
       display: block;
       position: relative;
-      width: rem(30);
+      //top: rem(16);
+      //right: rem(23);
+      width: rem(24);
       height: rem(18);
       cursor: pointer;
       z-index: 5;
@@ -47,7 +181,7 @@
          position: absolute;
          width: 100%;
          height: rem(2);
-         background-color: #000;
+         background-color: var(--neutural-white);
       }
 
       &::before {
@@ -81,4 +215,4 @@
          }
       }
    }
-}*/
+}
