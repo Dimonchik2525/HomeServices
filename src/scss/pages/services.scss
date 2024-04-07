@@ -1,0 +1,35 @@
+.services {
+   @include adaptiveValue("padding-top", 123, 60);
+   @include adaptiveValue("padding-top", 64, 32);
+
+   &__container {}
+
+   &__block {
+      display: grid;
+      grid-template: auto/36;
+   }
+
+   &__support {
+      max-width: rem(561);
+
+      &__support__title {}
+
+      &__text {}
+
+      &__list {
+         &__item {
+            svg {}
+
+            p {}
+         }
+      }
+
+      &__button {
+         span {}
+      }
+   }
+
+   &__img {
+      img {}
+   }
+}
