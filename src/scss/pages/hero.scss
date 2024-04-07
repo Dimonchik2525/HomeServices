@@ -1,0 +1,51 @@
+.hero {
+   &__container {}
+
+   &__block {}
+
+   &__left {
+      &__img {
+         img {}
+      }
+   }
+
+   &__main {}
+
+   &__text {
+      &__title {
+         &__item {}
+      }
+
+      &__subtitle {}
+
+      &__features {
+         &__item {
+            svg {}
+
+            p {}
+         }
+      }
+
+      &__button {
+         button {}
+
+         &__img {
+            svg {}
+         }
+      }
+   }
+
+   &__abilities {
+      &__item {
+         img {}
+
+         p {}
+      }
+   }
+
+   &__right {
+      &__img {
+         img {}
+      }
+   }
+}
