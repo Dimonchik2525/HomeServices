@@ -39,6 +39,7 @@
    &__logo {
       display: flex;
       column-gap: rem(8);
+      @include adaptiveValue("margin-left", -80, 0, 1900, 1500, 1);
 
       img {
          height: rem(20);
@@ -77,7 +78,7 @@
             justify-content: start;
             align-items: stretch;
             z-index: 50;
-
+            overflow: auto;
          }
 
          .menu-open & {
@@ -89,7 +90,7 @@
 
             @media (max-width: 720px) {
                display: block;
-               height: rem(56);
+               min-height: rem(56);
                display: flex;
                align-items: center;
                padding-left: rem(29.87);
@@ -100,6 +101,7 @@
       &__list {
          margin: 0 auto;
          display: flex;
+         flex-wrap: wrap;
          @include adaptiveValue("column-gap", 57, 10, 1500, 700, 1);
          font-weight: 700;
          color: var(--neutural-white);
@@ -141,6 +143,7 @@
          align-items: center;
          column-gap: rem(10);
          justify-self: end;
+         @include adaptiveValue("margin-right", -80, 0, 1900, 1500, 1);
 
          p {
             &:first-child {

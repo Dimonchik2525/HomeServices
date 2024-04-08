@@ -1,5 +1,32 @@
 .hero {
    background: var(--primary-dark-blue-1);
+   position: relative;
+   overflow: hidden;
+
+   @media (min-width:1850px) {
+
+      .hero__abilities__img2,
+      .hero__abilities__img1 {
+         display: none;
+      }
+   }
+
+   &__img__left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include adaptiveValue("left", 0, -370);
+      @include adaptiveValue("height", 45, 31, 1500, 450, 1);
+
+   }
+
+   &__img__right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include adaptiveValue("height", 45, 31, 1500, 450, 1);
+      @include adaptiveValue("right", 0, -370);
+   }
 
    &__container {}
 
@@ -110,6 +137,7 @@
          justify-content: center;
          @include adaptiveValue("column-gap", 41, 15, 1920, 1100, 1);
          @include adaptiveValue("padding-bottom", 48, 24);
+         flex-wrap: wrap;
 
          &__item {
             @include adaptiveValue("font-size", 20, 14);
@@ -179,41 +207,46 @@
       display: grid;
       grid-template: auto/ 1fr 1fr;
       row-gap: rem(40);
-      @include adaptiveValue("column-gap", 55, 30, 600, 320, 1);
+      @include adaptiveValue("column-gap", 55, 40, 600, 320, 1);
       margin: 0 auto;
+      position: relative;
 
       @media (min-width:1850px) {
          margin: 0 0;
          row-gap: 0;
-         column-gap: 0;
+         column-gap: rem(15);
          grid-template-columns: repeat(auto-fit, minmax(rem(159), 1fr));
          @include adaptiveValue("padding-left", 50, 15, 1920, 1450, 1);
          @include adaptiveValue("padding-right", 50, 15, 1920, 1450, 1);
       }
 
+      &__img1 {
+         position: absolute;
+         width: 100%;
+         //height: 100%;
+         top: 50%;
+         left: 0;
+      }
+
+      &__img2 {
+         position: absolute;
+         //width: 100%;
+         height: 100%;
+         top: 0;
+         left: 50%;
+      }
+
       &__item {
          display: flex;
          align-items: center;
-         //justify-content: center;
-         column-gap: rem(15);
+         @include adaptiveValue("gap", 15, 8);
          border-radius: 1px;
+         position: relative;
 
-
-         /*@media (min-width:700px) {
-            &:not(:last-child) {
-               border-right: rem(1) solid var(--primary-dark-blue-2);
-            }
-
-            &:not(:first-child) {
-               border-left: rem(1) solid var(--primary-dark-blue-2);
-            }
-         }
-
-         @media (max-width:700px) {
-            text-align: center;
+         @media (max-width: 700px) {
             flex-direction: column;
-            row-gap: rem(8);
-         }*/
+            text-align: center;
+         }
 
          &__img {
             @include adaptiveValue("width", 48, 32);

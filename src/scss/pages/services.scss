@@ -1,35 +1,120 @@
 .services {
    @include adaptiveValue("padding-top", 123, 60);
-   @include adaptiveValue("padding-top", 64, 32);
+   @include adaptiveValue("padding-bottom", 64, 32);
 
    &__container {}
 
    &__block {
       display: grid;
-      grid-template: auto/36;
-   }
+      grid-template: auto/1fr 1fr;
+      @include adaptiveValue("gap", 60, 32);
+      align-items: end;
 
-   &__support {
-      max-width: rem(561);
-
-      &__support__title {}
-
-      &__text {}
-
-      &__list {
-         &__item {
-            svg {}
-
-            p {}
-         }
-      }
-
-      &__button {
-         span {}
+      @media (max-width:800px) {
+         grid-template: auto auto/auto;
       }
    }
 
    &__img {
-      img {}
+      justify-self: end;
+      align-self: center;
+
+      @media (max-width:800px) {
+         justify-self: center;
+         grid-row: 1/2;
+      }
+
+      img {
+         max-width: 100%;
+      }
    }
+
+   &__support {
+      max-width: rem(561);
+      padding-bottom: rem(24);
+
+      &__title {
+         font-weight: 700;
+         @include adaptiveValue("font-size", 52, 24);
+         line-height: 123%;
+         color: var(--neutural-black);
+         @include adaptiveValue("padding-bottom", 24, 12);
+
+         @media (max-width:$tablet) {
+            line-height: 133%;
+         }
+      }
+
+      &__text {
+         line-height: 156%;
+         color: var(--neutural-grey-1);
+         @include adaptiveValue("padding-bottom", 56, 32);
+      }
+
+      &__list {
+         font-weight: 700;
+         @include adaptiveValue("font-size", 20, 16);
+         color: var(--primary-dark-blue-2);
+         @include adaptiveValue("padding-bottom", 56, 32);
+         display: grid;
+         grid-template: auto/auto auto;
+         @include adaptiveValue("column-gap", 57, 10);
+         @include adaptiveValue("row-gap", 32, 24);
+
+         @media (max-width:800px) {
+            font-weight: 600;
+            grid-template: auto/auto;
+            text-align: center;
+         }
+
+         &__item {
+            display: flex;
+            column-gap: rem(12);
+            align-items: center;
+
+            svg {
+               width: rem(16);
+               height: rem(16);
+               fill: transparent;
+               stroke-width: rem(2);
+               stroke: var(--primary-dark-blue-2)
+            }
+
+            p {
+               line-height: 140%;
+
+               @media (max-width:$tablet) {
+                  line-height: 150%;
+               }
+            }
+         }
+      }
+
+      &__button {
+         border-radius: 24px;
+         padding: rem(12) rem(32);
+         width: 80.21%;
+         min-height: rem(80);
+         line-height: 156%;
+         color: var(--neutural-white);
+         background: var(--primary-sky-blue);
+
+         span {
+            font-weight: 600;
+            font-size: rem(20);
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+
+            @media (max-width:$tablet) {
+               line-height: 133%;
+               text-decoration: none;
+            }
+         }
+
+         @media (max-width:$tablet) {
+            padding: rem(12) rem(24);
+         }
+      }
+   }
+
 }
