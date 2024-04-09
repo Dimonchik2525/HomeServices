@@ -2,6 +2,7 @@
    background: var(--primary-dark-blue-1);
    position: relative;
    overflow: hidden;
+   @include adaptiveValue("padding-top", 80, 56, 1500, 720, 1);
 
    @media (min-width:1850px) {
 
@@ -162,6 +163,7 @@
       }
 
       &__button {
+         cursor: pointer;
          position: relative;
          border-radius: 60px;
          padding: 8px;
@@ -171,6 +173,13 @@
          display: flex;
          @include adaptiveValue("padding-left", 16, 12);
          margin: 0 auto;
+         transition: all 0.8s ease 0s;
+
+         @media (any-hover: hover) {
+            &:hover {
+               background: rgb(68, 68, 246);
+            }
+         }
 
          button {
             font-weight: 700;
@@ -220,7 +229,9 @@
          @include adaptiveValue("padding-right", 50, 15, 1920, 1450, 1);
       }
 
+
       &__img1 {
+         transition: all 0.8s ease 0s;
          position: absolute;
          width: 100%;
          //height: 100%;
@@ -229,6 +240,7 @@
       }
 
       &__img2 {
+         transition: all 0.8s ease 0s;
          position: absolute;
          //width: 100%;
          height: 100%;

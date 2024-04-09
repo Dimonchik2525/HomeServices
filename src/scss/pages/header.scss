@@ -3,21 +3,28 @@
    @include adaptiveValue("min-height", 80, 56, 1500, 720, 1);
    display: flex;
    align-items: center;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 50;
+   transition: all 0.8s ease 0s;
 
-   &::before,
-   &::after {
-      content: '';
+   &._header-scroll {
+      position: fixed;
+      background-color: rgb(109, 109, 255);
+      opacity: 0.7;
 
-   }
+      @media (any-hover: hover) {
+         &:hover {
+            opacity: 1;
+         }
+      }
 
-   &::before {
-      content: '';
-
-   }
-
-   &::after {
-      content: '';
-
+      .menu-open & {
+         background: var(--primary-dark-blue-1);
+         opacity: 1;
+      }
    }
 
    &__container {
@@ -79,6 +86,7 @@
             align-items: stretch;
             z-index: 50;
             overflow: auto;
+            height: 100vh;
          }
 
          .menu-open & {
@@ -113,6 +121,7 @@
       }
 
       &__item {
+         transition: all 0.8s ease 0s;
          text-align: center;
 
          @media (any-hover: hover) {
@@ -120,6 +129,7 @@
                text-decoration: underline;
             }
          }
+
       }
 
       &__link {
