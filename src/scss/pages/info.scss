@@ -1,0 +1,27 @@
+.steps {
+   &__container {}
+
+   &__block {}
+
+   &__img {
+      &__bg {}
+
+      &__worker {}
+
+      &__star {}
+   }
+
+   &__main {
+      &__title {}
+
+      &__list {
+         &__item {
+            &__number {}
+
+            &__title {}
+
+            &__text {}
+         }
+      }
+   }
+}
