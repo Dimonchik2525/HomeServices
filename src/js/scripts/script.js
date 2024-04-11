@@ -20,3 +20,7 @@ window.addEventListener('load', function (e) {
       inp.placeholder = 'Enter email address'
    }
 })
+
+let footer = document.querySelector('.footer__newsletter__text')
+console.log(footer.nextElementSibling)
+console.log(footer.textContent)

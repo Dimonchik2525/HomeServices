@@ -286,3 +286,29 @@
       }
    }
 }
+
+//!! Benefits block ===========================================
+
+.benefits {
+   &__container {}
+
+   &__block {}
+
+   &__header {
+      &__title {}
+
+      &__subtitle {}
+   }
+
+   &__list {
+      &__item {
+         &__img {}
+
+         &__text {
+            &__title {}
+
+            &__subtitle {}
+         }
+      }
+   }
+}
