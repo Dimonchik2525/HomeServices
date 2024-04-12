@@ -1,26 +1,132 @@
 .steps {
+   @include adaptiveValue("padding-top", 184, 51);
+   @include adaptiveValue("padding-bottom", 156, 32);
+
    &__container {}
 
-   &__block {}
+   &__block {
+      display: grid;
+      grid-template: auto /44.4444% auto;
+      column-gap: rem(30);
+
+      @media (max-width:$tablet) {
+         grid-template: auto auto/auto;
+         @include adaptiveValue("row-gap", 35, 24, 998, 375, 1);
+      }
+   }
 
    &__img {
-      &__bg {}
+      align-self: start;
+      position: relative;
 
-      &__worker {}
+      @media (max-width:$tablet) {
+         justify-self: center;
+      }
 
-      &__star {}
+      &__bg {
+         max-width: 100%;
+         position: relative;
+      }
+
+      &__worker {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         margin-left: -12.068%;
+         max-width: 112.068%;
+      }
+
+      &__star {
+         position: absolute;
+         top: 31.3%;
+         right: 9.81%;
+         @include adaptiveValue("width", 131, 56);
+         @include adaptiveValue("height", 131, 56);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include adaptiveValue("width", 131, 56);
+            @include adaptiveValue("height", 131, 56);
+         }
+
+         svg {
+            stroke-width: 12.50px;
+            stroke: var(--neutural-white);
+            @include adaptiveValue("width", 57, 25);
+            @include adaptiveValue("height", 38, 17);
+            fill: transparent;
+            position: relative;
+            z-index: 3;
+         }
+      }
    }
 
    &__main {
-      &__title {}
+      justify-self: end;
+      max-width: rem(696);
+      display: flex;
+      flex-direction: column;
+      @include adaptiveValue("row-gap", 60, 24);
+
+      @media (max-width:$tablet) {
+         justify-self: start;
+      }
+
+      &__title {
+         font-weight: 700;
+         line-height: 123%;
+         @include adaptiveValue("font-size", 52, 24);
+         color: var(--neutural-black);
+
+         @media (max-width:$tablet) {
+            line-height: 133%;
+         }
+      }
 
       &__list {
+         display: flex;
+         flex-direction: column;
+         @include adaptiveValue("row-gap", 52, 24);
+
          &__item {
-            &__number {}
+            display: flex;
+            align-items: start;
 
-            &__title {}
+            @media (max-width:700px) {
+               display: grid;
+               grid-template: auto auto/ auto 1fr;
+            }
 
-            &__text {}
+            &__number {
+               font-weight: 700;
+               font-size: 52px;
+               line-height: 123%;
+               color: var(--neutural-grey-3);
+               padding-right: rem(24);
+            }
+
+            &__title {
+               font-weight: 700;
+               @include adaptiveValue("font-size", 24, 20);
+               line-height: 133%;
+               padding-right: rem(36);
+
+               @media (max-width:$tablet) {
+                  font-weight: 600;
+                  line-height: 160%;
+               }
+            }
+
+            &__text {
+               line-height: 156%;
+               grid-column: 1/3;
+               color: var(--neutural-grey-1);
+            }
          }
       }
    }
