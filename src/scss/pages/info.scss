@@ -1,3 +1,4 @@
+//!! Steps block ====================================================
 .steps {
    @include adaptiveValue("padding-top", 184, 51);
    @include adaptiveValue("padding-bottom", 156, 32);
@@ -126,6 +127,42 @@
                line-height: 156%;
                grid-column: 1/3;
                color: var(--neutural-grey-1);
+            }
+         }
+      }
+   }
+}
+
+//!! Review block================================================
+
+.review {
+   &__container {}
+
+   &__block {}
+
+   &__title {}
+
+   &__slider {}
+
+   &__wrapper {}
+
+   &__slide {
+      &__title {
+         img {}
+      }
+
+      &__main {
+         &__text {}
+
+         &__content {
+            &__img {
+               img {}
+            }
+
+            &__text {
+               p {}
+
+               .rating {}
             }
          }
       }
