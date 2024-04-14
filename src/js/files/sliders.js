@@ -35,7 +35,7 @@ function initSliders() {
 			// для конкретного случая
 			modules: [Navigation, Pagination],
 			observer: true,
-			loop: true,
+			//loop: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
