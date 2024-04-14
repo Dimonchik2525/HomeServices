@@ -136,33 +136,229 @@
 //!! Review block================================================
 
 .review {
+   @include adaptiveValue("padding-top", 131, 32);
+   @include adaptiveValue("padding-bottom", 132, 32);
+
    &__container {}
 
    &__block {}
 
-   &__title {}
+   &__title {
+      font-weight: 700;
+      @include adaptiveValue("font-size", 52, 24);
+      font-size: 52px;
+      line-height: 123%;
+      text-align: center;
+      color: var(--neutural-black);
 
-   &__slider {}
+      @media (max-width:$tablet) {
+         line-height: 133%;
+      }
+
+      @include adaptiveValue("padding-bottom", 66, 32);
+   }
+
+   &__slider {
+      max-width: rem(1130);
+      margin: 0 auto;
+      position: relative;
+      @include adaptiveValue("padding-bottom", 78, 80);
+
+      &__controll {
+
+         div {
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            width: rem(48);
+            height: rem(48);
+            background: var(--primary-sky-blue);
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (min-width:$tablet) {
+               top: 50%;
+               transform: translateY(-50%);
+            }
+         }
+
+         svg {
+            transition: all 0.8s ease 0s;
+            width: rem(25);
+            height: rem(24);
+            stroke-width: 2px;
+            stroke: var(--neutural-white);
+            fill: none;
+         }
+
+         &__left {
+            left: 8.4%;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  svg {
+                     transform: scale(-1.2);
+
+                  }
+               }
+            }
+
+            @media (min-width:$tablet) {
+               left: rem(0);
+            }
+
+            svg {
+               transform: scale(-1)
+            }
+         }
+
+         &__right {
+            right: 8.4%;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  svg {
+                     transform: scale(1.2);
+
+                  }
+               }
+            }
+
+
+            @media (min-width:$tablet) {
+               right: rem(0);
+            }
+
+            svg {}
+         }
+      }
+
+      &__pagination {
+         position: absolute;
+         text-align: center;
+         z-index: 10;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: auto;
+         display: flex;
+         column-gap: rem(12);
+         transition: all 0.8s ease 0s;
+         justify-content: center;
+
+         .swiper-pagination-bullet {
+            transition: all 0.8s ease 0s;
+            display: block;
+            width: rem(12);
+            height: rem(12);
+            border-radius: 50%;
+            background-color: var(--neutural-soft-grey);
+
+            &-active {
+               border-radius: rem(24);
+               width: rem(40);
+               height: rem(12);
+               background: var(--primary-sky-blue);
+            }
+         }
+
+         @media (max-width:$tablet) {
+            bottom: rem(18);
+         }
+      }
+   }
 
    &__wrapper {}
 
    &__slide {
+
       &__title {
+         text-align: center;
+         @include adaptiveValue("height", 104, 60);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+
          img {}
+
+         &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(81deg, rgba(212, 218, 236, 0) 0%, rgba(193, 194, 200, 1) 52%, rgba(203, 207, 219, 0) 100%);
+            width: 100%;
+            height: rem(2);
+         }
       }
 
       &__main {
-         &__text {}
+         margin: 0 auto;
+         max-width: rem(986);
+         @include adaptiveValue("padding-top", 40, 24);
+         @include adaptiveValue("padding-bottom", 40, 0);
+         @include adaptiveValue("padding-left", 129, 0);
+         @include adaptiveValue("padding-right", 129, 0);
+
+         &__text {
+            @include adaptiveValue("font-size", 20, 18);
+            font-size: 20px;
+            line-height: 160%;
+            text-align: center;
+            color: var(--neutural-grey-1);
+            line-height: 160%;
+            @include adaptiveValue("padding-bottom", 40, 24);
+
+            @media (max-width:$tablet) {
+               line-height: 156%;
+            }
+
+         }
 
          &__content {
+            justify-content: center;
+            display: flex;
+            @include adaptiveValue("column-gap", 32, 16);
+
             &__img {
-               img {}
+               img {
+                  @include adaptiveValue("width", 76, 53);
+                  @include adaptiveValue("height", 76, 53);
+               }
             }
 
             &__text {
-               p {}
+               display: flex;
+               flex-direction: column;
+               @include adaptiveValue("row-gap", 8, 4);
 
-               .rating {}
+               p {
+                  font-weight: 700;
+                  @include adaptiveValue("font-size", 24, 20);
+                  line-height: 133%;
+
+                  @media (max-width:$tablet) {
+                     line-height: 140%;
+                  }
+               }
+
+               .rating {
+                  @include adaptiveValue("font-size", 30, 24);
+                  line-height: 1;
+
+                  &__value {
+                     display: none;
+                  }
+
+                  &__body {
+                     letter-spacing: rem(7);
+                  }
+
+                  &__item {}
+               }
             }
          }
       }

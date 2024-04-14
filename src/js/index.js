@@ -74,7 +74,7 @@ import * as flsForms from "./files/forms/forms.js";
 //flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */
-//flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль работы с select. */
 //import './libs/select.js'
@@ -115,7 +115,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-//import "./files/sliders.js";
+import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
@@ -138,7 +138,7 @@ import * as flsForms from "./files/forms/forms.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сниппет(HTML):
-//import './libs/watcher.js'
+import './libs/watcher.js'
 
 // Функции работы скроллом
 import * as flsScroll from "./files/scroll/scroll.js";

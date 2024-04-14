@@ -12,7 +12,7 @@
       <header data-scroll="10" class="header">
          <div class="header__container">
             <div class="header__block">
-               <a href="#" class="header__logo">
+               <a href="#" data-goto="#home" class="header__logo">
                   <img src="img/header/header__logo.svg" alt="">
                   <img src="img/header/HomePro.png" alt="">
                </a>
@@ -23,10 +23,11 @@
                         <img src="img/header/HomePro.png" alt="">
                      </div>
                      <ul class="menu__list">
-                        <li class="menu__item"><a href="" class="menu__link">About Us</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Services</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Our Blog</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Contact </a></li>
+                        <li class="menu__item"><a data-goto="#about" href="" class="menu__link">About
+                              Us</a></li>
+                        <li class="menu__item"><a data-goto="#services" href="" class="menu__link">Services</a></li>
+                        <li class="menu__item"><a data-goto="#blog" href="" class="menu__link">Our Blog</a></li>
+                        <li class="menu__item"><a data-goto="#contact" href="" class="menu__link">Contact </a></li>
                      </ul>
                      <div class="menu__24hours">
                         <p></p>
@@ -39,7 +40,7 @@
          </div>
       </header>
       <main class="main">
-         <section class="hero">
+         <section data-watch id="home" class="hero">
             <div class="hero__container">
                <div class="hero__block">
                   <div class="hero__left">
@@ -150,7 +151,7 @@
                   fill="white" />
             </svg>
          </section>
-         <section class="services">
+         <section data-watch id="about" class="services">
             <div class="services__container">
                <div class="services__block">
                   <div class="services__support">
@@ -206,7 +207,7 @@
                </div>
             </div>
          </section>
-         <section class="solutions">
+         <section data-watch id="services" class="solutions">
             <div class="solutions__container">
                <div class="solutions__block">
                   <div class="solutions__text">
@@ -297,7 +298,7 @@
                </div>
             </div>
          </section>
-         <section class="benefits">
+         <section data-watch class="benefits">
             <div class="benefits__bg">
                <div class="benefits__container">
                   <div class="benefits__block">
@@ -386,7 +387,7 @@
                <img class="benefits__bg__right" src="img/benefits/benefits__bg__right.png" alt="">
             </div>
          </section>
-         <section class="steps">
+         <section data-watch class="steps">
             <div class="steps__container">
                <div class="steps__block">
                   <div class="steps__img">
@@ -465,15 +466,85 @@
                               </div>
                            </div>
                         </div>
+                        <div class="review__slide swiper-slide">
+                           <div class="review__slide__title">
+                              <img src="img/review/review__logo.png" alt="">
+                           </div>
+                           <div class="review__slide__main">
+                              <div class="review__slide__main__text">Roof repairs can be a real headache, but HomePro
+                                 makes it easy! Their roofing team turned my leaky roof into a stockade. With their
+                                 craftsmanship and the best materials, my house is now ready to weather any storm.</div>
+                              <div class="review__slide__main__content">
+                                 <div class="review__slide__main__content__img">
+                                    <img src="img/review/review__img.jpg" alt="">
+                                 </div>
+                                 <div class="review__slide__main__content__text">
+                                    <p>Kende Attila</p>
+                                    <div class="rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">3.6</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="review__slide swiper-slide">
+                           <div class="review__slide__title">
+                              <img src="img/review/review__logo.png" alt="">
+                           </div>
+                           <div class="review__slide__main">
+                              <div class="review__slide__main__text">Roof repairs can be a real headache, but HomePro
+                                 makes it easy! Their roofing team turakes it easy! Their roofing team tuakes it easy!
+                                 Their roofing team tuakes it easy! Their roofing team tuakes it easy! Their roofing
+                                 team tuned my leaky roof into a stockade. With their
+                                 craftsmanship and the best materials, my house is now ready to weather any storm.</div>
+                              <div class="review__slide__main__content">
+                                 <div class="review__slide__main__content__img">
+                                    <img src="img/review/review__img.jpg" alt="">
+                                 </div>
+                                 <div class="review__slide__main__content__text">
+                                    <p>Kende Attila</p>
+                                    <div class="rating rating_set">
+                                       <div class="rating__body">
+                                          <div class="rating__active"></div>
+                                          <div class="rating__items">
+                                             <input type="radio" class="rating__item" value="1" name="rating">
+                                             <input type="radio" class="rating__item" value="2" name="rating">
+                                             <input type="radio" class="rating__item" value="3" name="rating">
+                                             <input type="radio" class="rating__item" value="4" name="rating">
+                                             <input type="radio" class="rating__item" value="5" name="rating">
+                                          </div>
+                                       </div>
+                                       <div class="rating__value">3.6</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
-                  </div>
-                  <div class="review__slider__controll">
-                     <svg class="svg-svg-arrow__rightt-dims review__slider__controll__left ">
-                        <use xlink:href="img/icons/icons.svg#svg-arrow__rightt"></use>
-                     </svg>
-                     <svg class="svg-svg-arrow__rightt-dims review__slider__controll__right ">
-                        <use xlink:href="img/icons/icons.svg#svg-arrow__rightt"></use>
-                     </svg>
+                     <div class="review__slider__controll">
+                        <div class="review__slider__controll__left">
+                           <svg class="svg-svg-arrow__rightt-dims">
+                              <use xlink:href="img/icons/icons.svg#svg-arrow__rightt"></use>
+                           </svg>
+                        </div>
+                        <div class=" review__slider__controll__right">
+                           <svg class="svg-svg-arrow__rightt-dims">
+                              <use xlink:href="img/icons/icons.svg#svg-arrow__rightt"></use>
+                           </svg>
+                        </div>
+                     </div>
+                     <div class="review__slider__pagination">
+                     </div>
                   </div>
                </div>
             </div>

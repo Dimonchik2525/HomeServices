@@ -144,6 +144,10 @@
                border-top: rem(1) solid var(--primary-dark-blue-2);
             }
          }
+
+         &._watcher-view {
+            text-decoration: underline;
+         }
       }
 
       &__24hours {

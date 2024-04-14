@@ -1,7 +1,7 @@
 let inp = document.querySelector('.footer__newsletter__form__input')
-console.log(inp.placeholder)
+//console.log(inp.placeholder)
 window.addEventListener('resize', function (e) {
-   console.log(document.documentElement.clientWidth);
+   //console.log(document.documentElement.clientWidth);
 
    if (document.documentElement.clientWidth < 1042) {
       inp.placeholder = 'email address'
@@ -11,7 +11,7 @@ window.addEventListener('resize', function (e) {
    }
 })
 window.addEventListener('load', function (e) {
-   console.log(document.documentElement.clientWidth);
+   //console.log(document.documentElement.clientWidth);
 
    if (document.documentElement.clientWidth < 1042) {
       inp.placeholder = 'email address'
@@ -22,5 +22,5 @@ window.addEventListener('load', function (e) {
 })
 
 let footer = document.querySelector('.footer__newsletter__text')
-console.log(footer.nextElementSibling)
-console.log(footer.textContent)
+//console.log(footer.nextElementSibling)
+//console.log(footer.textContent)
