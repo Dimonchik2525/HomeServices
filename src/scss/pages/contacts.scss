@@ -1,0 +1,21 @@
+.contacts {
+   &__container {}
+
+   &__block {}
+
+   &__text {
+      &__title {}
+
+      &__subtitle {
+         span {}
+      }
+   }
+
+   &__list {}
+
+   &__item {
+      &__title {}
+
+      &__body {}
+   }
+}
