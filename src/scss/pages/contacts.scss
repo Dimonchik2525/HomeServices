@@ -1,21 +1,100 @@
-.contacts {
+//!! Faq block ===============================================
+
+.faq {
+   @include adaptiveValue("padding-top", 224, 32);
+   @include adaptiveValue("padding-bottom", 230, 56);
+
    &__container {}
 
-   &__block {}
+   &__block {
+      display: grid;
+      grid-template: auto/auto 57.84%;
+      gap: rem(32);
 
-   &__text {
-      &__title {}
-
-      &__subtitle {
-         span {}
+      @media (max-width:800px) {
+         grid-template: auto auto/auto;
       }
    }
 
-   &__list {}
+   &__text {
+      &__title {
+         font-weight: 700;
+         @include adaptiveValue("font-size", 52, 24);
+         line-height: 123%;
+         color: var(--neutural-black);
+
+         @media (max-width:$tablet) {
+            line-height: 133%;
+            text-align: center;
+         }
+
+         @include adaptiveValue("padding-bottom", 24, 16);
+      }
+
+      &__subtitle {
+         @include adaptiveValue("font-size", 20, 18);
+         line-height: 160%;
+         color: var(--neutural-black);
+
+         @media (max-width:800px) {
+            line-height: 156%;
+            justify-content: center;
+         }
+
+         display: flex;
+         column-gap: rem(11);
+
+         span {
+            font-weight: 700;
+            line-height: 133%;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: var(--primary-sky-blue);
+            @include adaptiveValue("font-size", 24, 18);
+
+            @media (max-width:$tablet) {
+               font-weight: 600;
+            }
+
+         }
+      }
+   }
+
+   &__list {
+      gap: rem(12);
+   }
 
    &__item {
-      &__title {}
+      transition: all 0.8s ease 0s;
+      border-radius: rem(12);
 
-      &__body {}
+      &__title {
+         border: none;
+         font-weight: 700;
+         @include adaptiveValue("font-size", 24, 18);
+         line-height: 133%;
+         color: var(--neutural-grey-1);
+         padding: rem(24) rem(50) rem(24) rem(32);
+         border-radius: 0;
+
+         @media (max-width:$tablet) {
+            font-weight: 600;
+            color: #3a3a3a;
+         }
+
+         &._spoller-active {
+            background: var(--neutural-light-grey);
+         }
+      }
+
+      &__body {
+         border: 0;
+         border-radius: 0;
+         line-height: 150%;
+         color: #737373;
+         @include adaptiveValue("font-size", 16, 18);
+         padding: rem(16) rem(32) rem(24) rem(32);
+         background: var(--neutural-light-grey);
+      }
    }
 }
