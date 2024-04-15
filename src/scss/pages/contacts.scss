@@ -98,3 +98,29 @@
       }
    }
 }
+
+//!! Contacts block =====================================
+
+.contacts {
+   &__container {}
+
+   &__block {}
+
+   &__content {
+      &__title {}
+
+      &__benefits {
+         &__item {
+            svg {}
+
+            p {}
+         }
+      }
+
+      &__button {}
+   }
+
+   &__img {
+      img {}
+   }
+}
