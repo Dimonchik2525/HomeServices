@@ -102,25 +102,101 @@
 //!! Contacts block =====================================
 
 .contacts {
+   background: var(--primary-dark-blue-1);
+
    &__container {}
 
-   &__block {}
+   &__block {
+      display: grid;
+      grid-template: auto/auto 50.41%;
+      align-items: center;
+      gap: rem(30);
 
-   &__content {
-      &__title {}
-
-      &__benefits {
-         &__item {
-            svg {}
-
-            p {}
-         }
+      @media (max-width:$tablet) {
+         grid-template: auto/auto;
       }
-
-      &__button {}
    }
 
    &__img {
-      img {}
+      margin-right: -33.15%;
+      position: relative;
+      z-index: 3;
+
+      @media (max-width:$tablet) {
+         margin-right: 0;
+         order: 2;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__content {
+      max-width: rem(662);
+
+      @media (max-width:$tablet) {
+         padding-top: rem(56);
+         max-width: 100%;
+      }
+
+      &__title {
+         font-weight: 800;
+         @include adaptiveValue("font-size", 64, 24);
+         line-height: 119%;
+         color: var(--neutural-white);
+
+         @media (max-width:$tablet) {
+            font-weight: 700;
+            line-height: 133%;
+            text-align: center;
+         }
+
+         padding-bottom: rem(24);
+      }
+
+      &__benefits {
+         display: flex;
+         flex-wrap: wrap;
+         @include adaptiveValue("column-gap", 41, 24);
+
+         &__item {
+            @include adaptiveValue("font-size", 20, 14);
+            color: var(--primary-sky-blue);
+            display: flex;
+            align-items: center;
+            column-gap: rem(8);
+
+            svg {
+               stroke-width: 2px;
+               stroke: var(--primary-sky-blue);
+               fill: transparent;
+               @include adaptiveValue("width", 19, 14);
+               @include adaptiveValue("height", 13, 10);
+            }
+
+            p {
+               font-weight: 500;
+               white-space: nowrap;
+               line-height: 160%;
+
+               @media (max-width:$tablet) {
+                  line-height: 143%;
+               }
+            }
+         }
+
+         @include adaptiveValue("padding-bottom", 36, 24);
+
+         @media (max-width:$tablet) {
+            justify-content: center;
+         }
+      }
+
+      &__button {
+         @media (min-width:$tablet) {
+            margin: 0;
+         }
+      }
    }
 }
