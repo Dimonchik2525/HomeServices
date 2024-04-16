@@ -453,8 +453,18 @@
          margin: 0 auto;
 
          &__img {
+            overflow: hidden;
+            border-radius: rem(24);
+
             img {
                max-width: 100%;
+               transition: all 0.8s ease 0s;
+
+               @media (any-hover: hover) {
+                  &:hover {
+                     transform: scale(1.2);
+                  }
+               }
             }
          }
 

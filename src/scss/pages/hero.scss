@@ -115,7 +115,7 @@
          @include adaptiveValue("column-gap", 52, 20, 1900, 800, 1);
          @include adaptiveValue("padding-bottom", 26, 12);
          transform: translateY(-50%);
-         transition: transform 10.8s ease 0s;
+         transition: transform 1.8s ease 0s;
 
          &._watcher-view {
             transform: translateY(0)
@@ -155,8 +155,8 @@
          @include adaptiveValue("font-size", 64, 28, 1900, 700, 1);
          color: var(--neutural-white);
          padding-bottom: rem(24);
-         transform: translateY(-50%);
-         transition: transform 5.8s ease 0s;
+         transform: translateY(-40%);
+         transition: transform 1.8s ease 0s;
 
          &._watcher-view {
             transform: translateY(0)

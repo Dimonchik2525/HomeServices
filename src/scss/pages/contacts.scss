@@ -88,6 +88,7 @@
          color: var(--neutural-grey-1);
          padding: rem(24) rem(50) rem(24) rem(32);
          border-radius: 0;
+         transition: all 0.8s ease 0s;
 
          @media (max-width:$tablet) {
             font-weight: 600;
@@ -145,6 +146,7 @@
    }
 
    &__img {
+      overflow: hidden;
       margin-right: -33.15%;
       position: relative;
       z-index: 3;
@@ -156,6 +158,11 @@
 
       img {
          width: 100%;
+         transition: transform 1.8s ease 0s;
+
+         &._watcher-view {
+            transform: scale(1.2)
+         }
       }
    }
 
