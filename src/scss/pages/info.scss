@@ -275,6 +275,7 @@
          justify-content: center;
 
          .swiper-pagination-bullet {
+            cursor: pointer;
             transition: all 0.8s ease 0s;
             display: block;
             width: rem(12);

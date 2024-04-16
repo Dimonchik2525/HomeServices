@@ -260,7 +260,7 @@
       @include adaptiveValue("column-gap", 55, 40, 600, 320, 1);
       margin: 0 auto;
       position: relative;
-      transform: translateY(-50%);
+      transform: translateY(-30%);
       transition: transform 1.8s ease 0s;
 
       &._watcher-view {
